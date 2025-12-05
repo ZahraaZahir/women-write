@@ -9,69 +9,163 @@
         margin: 0;
         padding: 0;
         font-family: 'Amiri', serif;
-        background: #faf7f5;
+        background: var(--bg);
+        color: var(--text);
         line-height: 1.8;
+        transition: background 0.3s, color 0.3s;
       }
+
+      :root {
+        --bg: #faf7f5;
+        --text: #3a2d2d;
+        --card-bg: #ffffff;
+        --accent: #5b3d3d;
+      }
+
+      .dark-mode {
+        --bg: #1e1b1b;
+        --text: #f2e9e4;
+        --card-bg: #2c2727;
+        --accent: #d4c2c2;
+      }
+
       header {
         background: url('flowers.svg') center/cover no-repeat;
         padding: 80px 20px;
         text-align: center;
-        color: #3a2d2d;
       }
+
       header h1 {
         font-size: 2.4rem;
         margin: 0;
       }
+
+      /* Navigation */
+      nav {
+        background: var(--card-bg);
+        padding: 12px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+
+      nav a {
+        color: var(--accent);
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 1rem;
+      }
+
+      /* Dark mode button */
+      #toggleMode {
+        padding: 6px 14px;
+        border: none;
+        cursor: pointer;
+        background: var(--accent);
+        color: #fff;
+        border-radius: 8px;
+        font-size: 0.9rem;
+      }
+
       .section {
         max-width: 850px;
         margin: 40px auto;
-        background: #ffffff;
+        background: var(--card-bg);
         padding: 30px;
         border-radius: 16px;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 0.8s ease;
       }
-      .section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-        color: #5b3d3d;
+
+      .show {
+        opacity: 1 !important;
+        transform: none !important;
       }
-      .example {
-        background: #f4ecea;
+
+      /* Accordion */
+      .accordion {
+        background: var(--card-bg);
+        border: 1px solid #c9b5b0;
         padding: 15px;
-        border-radius: 12px;
+        border-radius: 10px;
+        cursor: pointer;
         margin-top: 20px;
-        border-right: 4px solid #c49a94;
+      }
+
+      .panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        background: #f4ecea;
+        padding: 0 15px;
+        border-radius: 10px;
+        margin-top: 5px;
       }
     </style>
   </head>
   <body>
+    <nav>
+      <div>
+        <a href="#cixous">هيلين سيكسو</a>
+      </div>
+      <button id="toggleMode">الوضع الداكن</button>
+    </nav>
+
     <header>
       <h1>نظريات نسوية وقراءات تطبيقية</h1>
     </header>
 
-    <section class="section">
-      <h2>هيلين سيكسو – "ضحكة الميدوسا"</h2>
+    <section class="section" id="cixous">
+      <h2>هيلين سيكسو – "ضحكة الميدوزا"</h2>
       <p>
-        في هذا النص التنظيري الجريء، تدعو سيكسو النساء إلى كتابة أجسادهن، أي
-        إنتاج كتابة تنبع من الخبرة الجسدية الأنثوية، لا من لغة وسرديات يهيمن
-        عليها الذكور. ترى سيكسو أن الكتابة النسائية ليست مجرد موضوعات جديدة، بل
-        طريقة مختلفة تمامًا في الإحساس، والتفكير، والتعبير.
+        في هذا النص تدعو سيكسو النساء إلى كتابة أجسادهن، أي إنتاج كتابة تنبع من
+        الخبرة الجسدية الأنثوية.
       </p>
       <p>
-        تؤكّد سيكسو أن المرأة طالما أُقصيت عن التعبير الحقيقي عن ذاتها، فتم
-        تصويرها في النصوص بوصفها «الآخر»، بينما تحرّك كتابتها الخاصة بوصفها فعل
-        تحرّر يكسر حدود السلطة اللغوية.
+        ترى سيكسو أن الكتابة النسائية فعل تحرّر يكسر الحدود اللغوية التي فرضها
+        الخطاب الذكوري.
       </p>
 
-      <div class="example">
-        <h3>مثال تطبيقي</h3>
+      <div class="accordion">مثال تطبيقي</div>
+      <div class="panel">
         <p>
-          يمكن قراءة قصة «عيون بهية» لأليفة رفعت كنص يُجسّد فكرة الكتابة من داخل
-          الجسد الأنثوي؛ فالساردة تصف خبراتها اليومية بوعي جسدي حساس، من خلال
-          إحساسها بنظرة المجتمع وضغطه على جسدها الأنثوي. هذا النوع من السرد يعيد
-          للمرأة سلطة التعبير عن ذاتها بعيدًا عن الخطابات الذكورية.
+          يمكن قراءة قصة «عيون بهية» لأليفة رفعت كنص يُجسّد الكتابة المنبثقة من
+          الجسد الأنثوي، إذ تصف الساردة خبراتها اليومية بوعي جسدي حساس.
         </p>
       </div>
     </section>
+
+    <script>
+      // Dark mode toggle
+      document.getElementById('toggleMode').onclick = function () {
+        document.body.classList.toggle('dark-mode');
+      };
+
+      // Scroll reveal
+      const sections = document.querySelectorAll('.section');
+      const reveal = () => {
+        sections.forEach((sec) => {
+          const rect = sec.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) sec.classList.add('show');
+        });
+      };
+      window.addEventListener('scroll', reveal);
+      reveal();
+
+      // Accordion
+      const acc = document.querySelector('.accordion');
+      const panel = document.querySelector('.panel');
+      acc.addEventListener('click', () => {
+        panel.style.maxHeight = panel.style.maxHeight
+          ? null
+          : panel.scrollHeight + 'px';
+      });
+    </script>
   </body>
 </html>
