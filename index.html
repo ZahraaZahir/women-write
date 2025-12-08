@@ -3,169 +3,193 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>نظريات نسوية</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Amiri', serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.8;
-        transition: background 0.3s, color 0.3s;
-      }
+    <title>مشروع الكتابة النسوية</title>
 
-      :root {
-        --bg: #faf7f5;
-        --text: #3a2d2d;
-        --card-bg: #ffffff;
-        --accent: #5b3d3d;
-      }
+    <link rel="stylesheet" href="style.css" />
 
-      .dark-mode {
-        --bg: #1e1b1b;
-        --text: #f2e9e4;
-        --card-bg: #2c2727;
-        --accent: #d4c2c2;
-      }
-
-      header {
-        background: url('flowers.svg') center/cover no-repeat;
-        padding: 80px 20px;
-        text-align: center;
-      }
-
-      header h1 {
-        font-size: 2.4rem;
-        margin: 0;
-      }
-
-      /* Navigation */
-      nav {
-        background: var(--card-bg);
-        padding: 12px 25px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: sticky;
-        top: 0;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-      }
-
-      nav a {
-        color: var(--accent);
-        text-decoration: none;
-        margin: 0 10px;
-        font-size: 1rem;
-      }
-
-      /* Dark mode button */
-      #toggleMode {
-        padding: 6px 14px;
-        border: none;
-        cursor: pointer;
-        background: var(--accent);
-        color: #fff;
-        border-radius: 8px;
-        font-size: 0.9rem;
-      }
-
-      .section {
-        max-width: 850px;
-        margin: 40px auto;
-        background: var(--card-bg);
-        padding: 30px;
-        border-radius: 16px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-        opacity: 0;
-        transform: translateY(20px);
-        transition: 0.8s ease;
-      }
-
-      .show {
-        opacity: 1 !important;
-        transform: none !important;
-      }
-
-      /* Accordion */
-      .accordion {
-        background: var(--card-bg);
-        border: 1px solid #c9b5b0;
-        padding: 15px;
-        border-radius: 10px;
-        cursor: pointer;
-        margin-top: 20px;
-      }
-
-      .panel {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease;
-        background: #f4ecea;
-        padding: 0 15px;
-        border-radius: 10px;
-        margin-top: 5px;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav>
-      <div>
-        <a href="#cixous">هيلين سيكسو</a>
-      </div>
-      <button id="toggleMode">الوضع الداكن</button>
-    </nav>
-
     <header>
-      <h1>نظريات نسوية وقراءات تطبيقية</h1>
+      <h1>لماذا نجد صعوبة في الكتابة؟</h1>
+      <div class="subtitle">دليل تفاعلي لنظريات الأدب النسوي</div>
     </header>
 
-    <section class="section" id="cixous">
-      <h2>هيلين سيكسو – "ضحكة الميدوزا"</h2>
-      <p>
-        في هذا النص تدعو سيكسو النساء إلى كتابة أجسادهن، أي إنتاج كتابة تنبع من
-        الخبرة الجسدية الأنثوية.
-      </p>
-      <p>
-        ترى سيكسو أن الكتابة النسائية فعل تحرّر يكسر الحدود اللغوية التي فرضها
-        الخطاب الذكوري.
-      </p>
+    <!-- The Navigation Bar -->
+    <nav class="main-nav">
+      <button class="nav-btn active" data-target="woolf">فرجينيا وولف</button>
+      <button class="nav-btn" data-target="spender">المحو التاريخي</button>
+      <button class="nav-btn" data-target="gilbert">الحاجز النفسي</button>
+      <button class="nav-btn" data-target="cixous">هيلين سيكسو</button>
+    </nav>
 
-      <div class="accordion">مثال تطبيقي</div>
-      <div class="panel">
-        <p>
-          يمكن قراءة قصة «عيون بهية» لأليفة رفعت كنص يُجسّد الكتابة المنبثقة من
-          الجسد الأنثوي، إذ تصف الساردة خبراتها اليومية بوعي جسدي حساس.
-        </p>
-      </div>
-    </section>
+    <main class="container">
+      <!-- Section 1: Woolf -->
+      <section id="woolf" class="theory-section active">
+        <h2>الشروط المادية: فرجينيا وولف</h2>
+        <div class="reading-content">
+          <p class="intro">
+            <strong>الملخص:</strong> في كتابها "غرفة تخص المرء وحده"، تجادل وولف
+            بأن المرأة لا تفتقر للموهبة، بل تفتقر للظروف المادية. الكتابة تحتاج
+            إلى "دخل مادي" و"غرفة خاصة" بباب وقفل.
+          </p>
 
-    <script>
-      // Dark mode toggle
-      document.getElementById('toggleMode').onclick = function () {
-        document.body.classList.toggle('dark-mode');
-      };
+          <hr />
+          <p>
+            يُعد نص فرجينيا وولف "غرفة تخص المرء وحده" (1929) أحد أهم النصوص
+            النظرية النسوية المادية. في هذا المقال، تنقل وولف النقاش حول إبداع
+            المرأة من خانة "الموهبة والإلهام" إلى خانة "الاقتصاد والمادة". في
+            هذا العمل الروائي الغير إبداعي، تبدأ وولف من أطروحة صادمة في بساطتها
+            وواقعيتها: "لكي تكتب المرأة الرواية، لا بد أن يتوفر لها شيئان:
+            المال، وغرفة تخصها وحدها". تجادل وولف بأن التاريخ الأدبي الفقير
+            للنساء ليس دليلاً على نقص في القدرات العقلية أو الإبداعية لدى
+            المرأة، بل هو سجل لفقرها المادي وحرمانها التاريخي من الخصوصية. و
+            لتوضيح هذه الفكرة، تبتكر وولف شخصية خيالية أطلقت عليها اسم "جوديث
+            شكسبير" (أخت ويليام شكسبير المتخيلة). تتساءل وولف: ماذا لو كان
+            لشكسبير أخت تمتلك نفس موهبته؟ هل كانت ستنتج كما أنتج هو؟ هل كانت
+            ستشتهر كما اشتهر هو؟ هذه كلها أسئلة تتساءل وولف عنها. تجيب وولف بأن
+            "جوديث" لم تكن لتكتب كلمة واحدة. فبينما ذهب أخوها إلى المدرسة وتعلم
+            القواعد والمنطق، ثم انطلق إلى لندن ليعمل في المسرح، بقيت جوديث في
+            المنزل للاعتناء به و بالطبخ. حُرمت من التعليم، ولو حاولت الكتابة
+            لكانت فعلت ذلك خلسة خوفاً من سخرية الأهل أو عقاب المجتمع. تنتهي قصة
+            جوديث المتخيلة بالانتحار والدفن عند مفترق طرق مجهول. المغزى هنا ليس
+            أن جوديث تفتقر للعبقرية، بل أن "العبقرية" نفسها لا تنمو إلا عندما
+            تكون الحرية موجودة، والحرية تعتمد جوهرياً على الاستقلال المادي الذي
+            كان حكراً على الرجال. تنتقل وولف بعد ذلك لتحليل واقع الكاتبات في
+            القرن التاسع عشر، مشيرة إلى أن نساء عظيمات مثل جين أوستن كتبن
+            رواياتهن المشهورة الآن في "غرفة الجلوس المشتركة" او "الهول" وسط ضجيج
+            العائلة ومقاطعات الخدم والزوار المستمرة. تصف وولف كيف كانت أوستن
+            تضطر لإخفاء أوراقها بمجرد دخول شخص غريب. هذا الوضع، بحسب وولف، دمر
+            قدرة المرأة على التركيز العميق وتسبب في تشويه أسلوبها الأدبي، حيث
+            يظهر الغضب والمرارة وضيق الأفق في نصوص النساء كأثر جانبي للقمع، وليس
+            كخيار فني تختاره النساء.
+          </p>
+        </div>
 
-      // Scroll reveal
-      const sections = document.querySelectorAll('.section');
-      const reveal = () => {
-        sections.forEach((sec) => {
-          const rect = sec.getBoundingClientRect();
-          if (rect.top < window.innerHeight - 100) sec.classList.add('show');
-        });
-      };
-      window.addEventListener('scroll', reveal);
-      reveal();
+        <!-- The Interactive Tool (Isolated Box) -->
+        <div class="interactive-box">
+          <h3>تطبيق عملي: سجل المقاطعات</h3>
+          <p>
+            خلال الـ 24 ساعة القادمة، احسبي عدد المرات التي تمت فيها مقاطعتك.
+          </p>
+          <button class="action-btn">ابدئي التمرين</button>
+          <div class="result-panel">
+            <p>
+              <strong>المهمة:</strong> قارني عدد مقاطعاتك بوقت الرجال في المنزل.
+              هل وقتك "ملك عام" للعائلة؟
+            </p>
+          </div>
+        </div>
+      </section>
 
-      // Accordion
-      const acc = document.querySelector('.accordion');
-      const panel = document.querySelector('.panel');
-      acc.addEventListener('click', () => {
-        panel.style.maxHeight = panel.style.maxHeight
-          ? null
-          : panel.scrollHeight + 'px';
-      });
-    </script>
+      <!-- Section 2: Spender & Moers -->
+      <section id="spender" class="theory-section">
+        <h2>المحو التاريخي: ديل سبندر وإلين مورز</h2>
+        <div class="reading-content">
+          <p class="intro">
+            <strong>الملخص:</strong> لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور
+            أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات
+            دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد أكسير
+            سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات .
+            ديواس أيوتي أريري دولار إن ريبريهينديرأيت فوليوبتاتي فيلايت أيسسي
+            كايلليوم دولار أيو فيجايت نيولا باراياتيور. أيكسسيبتيور ساينت
+            أوككايكات كيوبايداتات نون بروايدينت ,سيونت ان كيولبا كيو أوفيسيا
+            ديسيريونتموليت انيم أيدي ايست لابوريوم
+          </p>
+          <hr />
+          <p>
+            [هنا النص الكامل للنظرية... كيف يتم استبعاد النساء من المناهج
+            الدراسية، وكيف يولد ذلك الشعور باليُتم الأدبي...]
+          </p>
+        </div>
+
+        <div class="interactive-box">
+          <h3>تطبيق عملي: شجرة العائلة المفقودة</h3>
+          <p>حاولي تذكر أسماء 5 كاتبات عراقيات قرأتِ لهن في المدرسة.</p>
+          <button class="action-btn">كشف الحقيقة</button>
+          <div class="result-panel">
+            <p>
+              <strong>المهمة:</strong> إذا لم تستطيعي، فهذا دليل على "المحو".
+              ابحثي اليوم عن كاتبة منسية واقرئي لها.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Gilbert & Gubar -->
+      <section id="gilbert" class="theory-section">
+        <h2>الحاجز النفسي: جيلبرت وجوبار</h2>
+        <div class="reading-content">
+          <p class="intro">
+            <strong>الملخص:</strong> لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور
+            أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات
+            دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد أكسير
+            سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات .
+            ديواس أيوتي أريري دولار إن ريبريهينديرأيت فوليوبتاتي فيلايت أيسسي
+            كايلليوم دولار أيو فيجايت نيولا باراياتيور. أيكسسيبتيور ساينت
+            أوككايكات كيوبايداتات نون بروايدينت ,سيونت ان كيولبا كيو أوفيسيا
+            ديسيريونتموليت انيم أيدي ايست لابوريوم
+          </p>
+          <hr />
+          <p>
+            [هنا النص الكامل... ثنائية "الملاك" و"المجنونة"، وكيف تتحول هذه
+            الثنائية اليوم إلى خوف من النشر والكتابة...]
+          </p>
+        </div>
+
+        <div class="interactive-box">
+          <h3>تطبيق عملي: تشخيص الناقد الداخلي</h3>
+          <p>اكتبي جملة كنتِ تخافين من نشرها.</p>
+          <button class="action-btn">تحليل الخوف</button>
+          <div class="result-panel">
+            <p>
+              <strong>المهمة:</strong> هل خفتِ لأنها "خاطئة"، أم لأنك خفتِ أن
+              يتم وصفك بـ "الهجومية"؟ هذا صوت المجتمع، وليس صوتك.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Cixous -->
+      <section id="cixous" class="theory-section">
+        <h2>الحل: هيلين سيكسو</h2>
+        <div class="reading-content">
+          <p class="intro">
+            <strong>الملخص:</strong> لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور
+            أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات
+            دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد أكسير
+            سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات .
+            ديواس أيوتي أريري دولار إن ريبريهينديرأيت فوليوبتاتي فيلايت أيسسي
+            كايلليوم دولار أيو فيجايت نيولا باراياتيور. أيكسسيبتيور ساينت
+            أوككايكات كيوبايداتات نون بروايدينت ,سيونت ان كيولبا كيو أوفيسيا
+            ديسيريونتموليت انيم أيدي ايست لابوريوم
+          </p>
+          <hr />
+          <p>
+            [هنا النص الكامل... مفهوم "الكتابة بالجسد" وكيف نتخلص من المنطق
+            الصارم...]
+          </p>
+        </div>
+
+        <div class="interactive-box">
+          <h3>تطبيق عملي: الكتابة بالجسد</h3>
+          <p>اضبطي المؤقت لـ 5 دقائق واكتبي دون توقف.</p>
+          <button class="action-btn">بدء الكتابة</button>
+          <div class="result-panel">
+            <p>
+              <strong>المهمة:</strong> صفي شعوراً جسدياً حالياً دون استخدام
+              المنطق. دعي النص يتدفق.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
