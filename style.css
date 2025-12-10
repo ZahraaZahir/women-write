@@ -172,13 +172,25 @@ h2 {
   header h1 {
     font-size: 2rem;
   }
+
+  .main-nav {
+    position: relative; /* Disables sticky on mobile */
+    top: auto;
+    gap: 10px; /* Reduces space between stacked buttons */
+    padding: 10px;
+  }
+
   .nav-btn {
     width: 100%;
     border-bottom: 1px solid #eee;
+    padding: 10px; /* Slightly smaller padding */
   }
+
   .nav-btn.active {
     border-bottom: 3px solid var(--text-secondary);
+    background-color: #fafafa; /* visual cue for active state on mobile */
   }
+
   .reading-content {
     padding: 20px;
   }
